@@ -1,0 +1,202 @@
+/* Base */
+* {
+  box-sizing: border-box; /* CRITICAL: Fix width issues everywhere */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: #fdfdfd;
+  color: #222;
+}
+
+.container {
+  max-width: 520px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.title {
+  font-family: "Fredoka One", cursive;
+  font-size: 2.4rem;
+  text-align: center;
+  color: #ff4f4f;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-top: -6px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  margin-top: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #444;
+}
+
+/* Input */
+.input-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.input-box {
+  width: 100%;
+  display: block;
+  padding: 12px;
+  border-radius: 14px;
+  border: 2px solid #e3e3e3;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.input-box:focus {
+  border-color: #ff4f4f;
+}
+
+/* Button */
+.mark-btn {
+  width: 100%;
+  display: block;
+  padding: 12px;
+  margin-top: 16px;
+  font-size: 1.15rem;
+  background: #ff4f4f;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: 0.2s;
+}
+
+.mark-btn:hover {
+  background: #e63f3f;
+}
+
+.mark-btn:active {
+  transform: scale(0.98);
+}
+
+/* Status text */
+.status-text {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Results */
+.results-list {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid #eee;
+}
+
+.result-name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Badges */
+.result-badge {
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.badge-success {
+  background: #d4f7d4;
+  color: #117a11;
+}
+
+.badge-warn {
+  background: #fff7cc;
+  color: #9a7b00;
+}
+
+.badge-error {
+  background: #ffd4d4;
+  color: #b20000;
+}
+
+/* Shinchan image */
+.shinchan-img {
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  width: 95px;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  opacity: 0.95;
+  pointer-events: none; /* ensure it doesn’t interfere */
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ff4f4f;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile First Enhancements */
+@media (max-width: 420px) {
+  .title {
+    font-size: 2rem;
+  }
+  .card {
+    padding: 18px;
+  }
+  .input-box,
+  .mark-btn {
+    font-size: 1.05rem;
+  }
+}

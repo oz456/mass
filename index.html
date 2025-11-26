@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shinchan's Gang – Attendance Marker</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Fredoka+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <h1 class="title">Shinchan's Gang</h1>
+      <p class="subtitle">Attendance Marker</p>
+    </header>
+
+    <!-- Card 1: Input -->
+    <div class="card">
+      <label for="codeInput" class="input-label">Enter Attendance Code</label>
+      <input
+        id="codeInput"
+        class="input-box"
+        type="text"
+        minlength="7"
+        maxlength="7"
+        placeholder="A123456"
+        oninput="forceUppercase(this)"
+      />
+
+      <button class="mark-btn" onclick="startMarking()">
+        Mark Attendance
+      </button>
+
+      <p id="statusText" class="status-text"></p>
+    </div>
+
+    <!-- Card 2: Results -->
+    <div class="card results-card">
+      <h2 class="card-title">Status</h2>
+
+      <div id="resultsList" class="results-list"></div>
+
+    </div>
+
+  </div>
+
+  <!-- Shinchan decorative image -->
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6ebxI3YHH2PKN2pl0qVph8uwex7A3Qd-HmQ&s"
+    class="shinchan-img"
+    alt="Shinchan"
+  />
+
+  <!-- Footer -->
+  <footer>
+    Wanna join <a href="https://www.linkedin.com/in/vvstf456/" target="_blank">Shinchan's</a> group?
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
