@@ -10,6 +10,12 @@ async function startMarking() {
   const code = document.getElementById("codeInput").value.trim();
   const status = document.getElementById("statusText");
   const results = document.getElementById("resultsList");
+  const markButton = document.querySelector(".mark-btn");
+  
+  // Disable button during processing
+  markButton.disabled = true;
+  markButton.style.opacity = "0.7";
+  markButton.style.cursor = "not-allowed";
 
   if (!code) {
     status.textContent = "Enter attendance code.";
@@ -50,6 +56,11 @@ async function startMarking() {
   } catch (err) {
     console.error(err);
     status.textContent = "Error reaching backend.";
+  } finally {
+    // Re-enable button when done or on error
+    markButton.disabled = false;
+    markButton.style.opacity = "1";
+    markButton.style.cursor = "pointer";
   }
 }
 
