@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shinchan's Gang – Attendance Marker</title>
+  <title>Kasukabe Defence Group – Fire!!</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Fredoka+One&display=swap" rel="stylesheet">
@@ -16,8 +16,7 @@
 
     <!-- Header -->
     <header>
-      <h1 class="title">Shinchan's Gang</h1>
-      <p class="subtitle">Attendance Marker</p>
+      <h1 class="title">Kasukabe's Defence Group</h1>
     </header>
 
     <!-- Card 1: Input -->
@@ -30,11 +29,13 @@
         minlength="7"
         maxlength="7"
         placeholder="A123456"
+        pattern="[A-Za-z][0-9]{6}"
+        title="1 letter followed by 6 digits (e.g., A123456)"
         oninput="forceUppercase(this)"
       />
 
       <button class="mark-btn" onclick="startMarking()">
-        Mark Attendance
+        Fire!!
       </button>
 
       <p id="statusText" class="status-text"></p>
